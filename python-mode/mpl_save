@@ -8,7 +8,6 @@ def save_pic_data(i,subdir,fname):
         content_dir = my_dir
     else:
         content_dir = os.path.join('/'.join(my_dir.split('/')[0:i]),subdir)
-
     if not os.path.exists(content_dir): os.makedirs(content_dir)
         
     abs_file_name = os.path.join(content_dir,fname)
@@ -16,13 +15,13 @@ def save_pic_data(i,subdir,fname):
     plt.savefig('%s.eps' % abs_file_name)
     plt.savefig('%s.jpg' % abs_file_name)
     os.chdir(content_dir)
-    #pickle.dump(pmf_2d,open('%s.pkl' % fname,'w'))
-    #np.savetxt('%s.dat' % fname,pmf_2d,fmt=['%3.4f','%3.11f'],delimiter=' ')
+    # pickle.dump(pmf_2d,open('%s.pkl' % fname,'w'))
+    # np.savetxt('%s.dat' % fname,pmf_2d,fmt=['%3.4f','%3.11f'],delimiter=' ')
 
 # save_pic_data(levels_back,subdir,name)
 # example: save_pic_data(-4,'fig',name)
 # example: save_pic_data(-3,'',name)
 # default: save_pic_data(0,'','mypic')
 # plt.show()
+# save_pic_data(0,'','example1')
 save_pic_data(0,'fig','example1')
-save_pic_data(0,'','example1')
