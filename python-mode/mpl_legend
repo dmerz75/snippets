@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# name: mpl_legend
+# contributor: Dale R. Merz Jr.
+# key: mpl_legend
+# --
+###  LEGEND  # 1,2,3,4 - quadrants
+## plt.legend(loc=1,prop={'size':14})
+## fpropl=matplotlib.font_manager.FontProperties(size='large')
+ax1.legend([r"Protein","C-Term vs. Protein","C-Term vs. C-Term"],
+           loc=2,
+           prop={'size':18})
+leg = plt.gca().get_legend()
+leg.draw_frame(False)
+
+
+

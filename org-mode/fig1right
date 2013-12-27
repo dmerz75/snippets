@@ -1,0 +1,21 @@
+# name: fig1right
+# key: fig1right
+# --
+# fig1right
+** Problem: Secondary Structure Over-stabilized
+*** A block                                           :B_ignoreheading:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_col: 0.4
+    :END:
+    - Vary the parameters
+    - Start with a new Potential Energy Function for the Dihedral term
+*** right half                                              :BMCOL:B_example:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_col: 0.6
+    :END:
+    #+CAPTION:    1st Attempt: Varied some parameters
+    #+LABEL:      fig:spectrin_paci_paper
+    #+ATTR_LaTeX: width=5.8cm,height=4.5cm
+    [[./fig_aug9/sopFORCEX_vary.png]]

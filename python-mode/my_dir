@@ -1,0 +1,4 @@
+# name: my_dir
+# key: my_dir
+# --
+my_dir = os.path.abspath(os.path.dirname(__file__))

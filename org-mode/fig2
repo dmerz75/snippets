@@ -1,0 +1,24 @@
+# name: fig2
+# key: fig2
+# --
+# fig2
+** Force vs. Extension
+*** right half                                         :B_ignoreheading:BMCOL:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_col: 0.50
+    :END:
+    #+CAPTION:    Forces, Full Trajectory
+    #+LABEL:      fig:forces
+    #+ATTR_LaTeX: width=6cm,height=5.6cm
+    [[./fig/sopFORCEX_v4.png]]
+*** right half                                              :BMCOL:B_example:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_col: 0.50
+    :END:
+    #+CAPTION:    Force vs. Extension
+    #+LABEL:      fig:force_extension
+    #+ATTR_LaTeX: width=6cm,height=5.6cm
+    [[./fig/sopFORCEX_v5.png]]
+

@@ -1,0 +1,7 @@
+# name: code
+# key: code
+# --
+#+BEGIN_SRC c
+  /* code snippet */
+  
+#+END_SRC

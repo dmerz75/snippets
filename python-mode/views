@@ -1,0 +1,7 @@
+# name: views (django)
+# key: views
+# --
+from django.http import HttpResponse
+
+def hello(request):
+    return HttpResponse("Hello World!")

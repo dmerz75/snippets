@@ -1,0 +1,11 @@
+# name: FILE *fp = fopen(..., ...);
+# key: FILE
+# --
+FILE *${out_file_xnamex};
+char filename_xnamex[120];
+
+sprintf(filename_xnamex,"measured.dat");
+out_file_xnamex = fopen(filename_xnamex,"a");
+
+fprintf(out_file_xnamex,"%4.5f %2d",float,2-digit);
+fclose(out_file_xnamex);

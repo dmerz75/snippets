@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+# name: mpl_size
+# contributor: Dale R. Merz Jr.
+# key: mpl_size
+# --
+plt.subplots_adjust(left=0.112,right=0.966,top=0.88,bottom=0.14)
+fig.set_size_inches(7.12,4.4)
+
+run_control = {'family':'sans-serif',
+                'weight':'normal',
+                'size'  :'24'}
+matplotlib.rc('font',**run_control)

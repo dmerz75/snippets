@@ -1,0 +1,4 @@
+# name: pickle_dump
+# key: pickle_dump
+# --
+pickle.dump(object_pkl,open('name.pkl','wb'))

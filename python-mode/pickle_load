@@ -1,0 +1,4 @@
+# name: pickle_load
+# key: pickle_load
+# --
+obj = pickle.load(open('name.pkl','r'))

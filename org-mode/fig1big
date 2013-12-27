@@ -1,0 +1,12 @@
+# name: fig1big
+# key: fig1big
+# --
+# fig1big
+** Coarse-Graining
+*** right half                                              :BMCOL:B_example:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_col: 1.0
+    :END:
+    #+ATTR_LaTeX: width=12cm,height=8.2cm
+    [[./fig/coarse.png]]

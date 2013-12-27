@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# name: mpl_font
+# contributor: Dale R. Merz Jr.
+# key: mpl_font
+# --
+fpropl=matplotlib.font_manager.FontProperties(size='large')
+run_control = {'family':'sans-serif',
+                'weight':'normal',
+                'size'  :'20'}
+matplotlib.rc('font',**run_control)

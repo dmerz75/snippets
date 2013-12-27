@@ -1,0 +1,9 @@
+# name: pipe
+# key: pipe
+# --
+def run_command(script):
+    pipe=subprocess.Popen(['python',script],stdin=subprocess.PIPE,
+                    stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+    stdout,stderr = pipe.communicate()
+    print stdout
+    print 'stderr >> ',stderr

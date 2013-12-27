@@ -1,0 +1,6 @@
+# name: shebang
+# key: shebang
+# --
+#!/usr/bin/env python
+import os,sys,time
+

@@ -1,0 +1,45 @@
+# name: fig4
+# key: fig4
+# --
+# fig4
+** Steered Molecular Dynamics
+*** Column 1                                :B_ignoreheading:BMCOL:B_columns:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: columns
+    :BEAMER_col: 0.5
+    :END:
+*** One                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=5cm,height=3.8cm
+    [[./fig/viewside/spectrin_allbeads_beginred_endgray_start1.png]]
+*** Two                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3.6cm
+    [[./fig/viewside/spectrin_allbeads_beginred_endgray_start5.png]]
+*** Column 2                                :B_ignoreheading:BMCOL:B_columns:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: columns
+    :BEAMER_col: 0.5
+    :END:
+*** One                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4.6cm,height=4cm
+    [[./fig/dummyatom2.png]]
+*** Two                                           :B_normal:B_column:B_block:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=6cm,height=3.7cm
+    [[./fig/da_force.png]]

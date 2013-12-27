@@ -1,0 +1,65 @@
+# name: fig6
+# key: fig6
+# --
+# fig6
+** the Timeline
+*** Column 1                                :B_ignoreheading:BMCOL:B_columns:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: columns
+    :BEAMER_col: 0.33
+    :END:
+*** One                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3cm
+    [[./xxlocationxx]]
+*** Two                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3cm
+    [[xxlocationxx]]
+*** Column 2                                :B_ignoreheading:BMCOL:B_columns:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: columns
+    :BEAMER_col: 0.33
+    :END:
+*** One                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3cm
+    [[./xxlocationxx]]
+*** Two                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3cm
+    [[./xxlocationxx]]
+*** Column 3                                :B_ignoreheading:BMCOL:B_columns:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: columns
+    :BEAMER_col: 0.33
+    :END:
+*** One                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3cm
+    [[./xxlocationxx]]
+*** Two                                                            :B_normal:
+    :PROPERTIES:
+    :BEAMER_env: ignoreheading
+    :BEAMER_env: normal
+    :END:
+    #+ATTR_LaTeX: width=4cm,height=3cm
+    [[./xxlocationxx]]
