@@ -1,5 +1,5 @@
-# name: pipe
-# key: pipe
+# name: subprocess
+# key: subprocess
 # --
 def run_command(script):
     pipe=subprocess.Popen(['python',script],stdin=subprocess.PIPE,
