@@ -1,0 +1,6 @@
+# name: text
+# key: text
+# --
+o = open('file.txt','r+')
+text=o.read()
+o.close()
