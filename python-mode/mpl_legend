@@ -6,10 +6,10 @@
 # LEGEND  
 # locations: quadrants - 1,2,3,4
 ax1.legend(["data1",
-        "data2",
-        "data3",
+        # "data2",
+        # "data3",
         ],
         loc=2,
-        prop={'size':18})
+        prop={'size':20})
 leg = plt.gca().get_legend()
 leg.draw_frame(False)

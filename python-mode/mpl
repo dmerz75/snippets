@@ -3,6 +3,7 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl
 # --
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 fig = plt.figure(0)
@@ -15,6 +16,7 @@ ax1 = plt.subplot(gs[0, :])
 mpl_moving_average
 mpl_font
 
+mpl_title_labels
 mpl_xy_lim_tick
 mpl_legend
 mpl_savefig
