@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# name: mpl_size
+# name: mpl_xy_lim_tick
 # contributor: Dale R. Merz Jr.
-# key: mpl_size
+# key: mpl_xy_lim_tick
 # --
 ax1.set_xlim(-0.1,4.1)
 ax1.set_ylim(-0.1,6.1)

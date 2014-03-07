@@ -7,9 +7,14 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 fig = plt.figure(0)
 
-gs = GridSpec(3,3)
+gs = GridSpec(1,1)
 ax1 = plt.subplot(gs[0, :])
 # ax2 = plt.subplot(gs[1,:-1])
-# ax3 = plt.subplot(gs[1:, -1])
-# ax4 = plt.subplot(gs[-1,0])
-# ax5 = plt.subplot(gs[-1,-2])
+
+# mpl  # available expansions
+mpl_moving_average
+mpl_font
+
+mpl_xy_lim_tick
+mpl_legend
+mpl_savefig
