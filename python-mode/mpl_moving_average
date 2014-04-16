@@ -4,9 +4,8 @@
 # key: mpl_moving_average
 # --
 def moving_average(x, n, type='simple'):
-    """
-    compute an n period moving average.
-    type is 'simple' | 'exponential'
+    """ compute an n period moving average.
+        type is 'simple' | 'exponential'
     """
     x = np.asarray(x)
     if type=='simple':
@@ -15,5 +14,9 @@ def moving_average(x, n, type='simple'):
         weights = np.exp(np.linspace(-1., 0., n))
     weights /= weights.sum()
     a =  np.convolve(x, weights, mode='full')[:len(x)]
-    a[:n] = a[n]
-    return a
+    # a[:n] = a[n]
+    ma = a[n:]
+    # print ma
+    # print len(ma)
+    # sys.exit()
+    return ma

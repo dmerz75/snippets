@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# name: filter
+# contributor: Dale R. Merz Jr.
+# key: filter
+# --
+idn = '$1'
+matches = filter(lambda x: idn in x,[m for m in files]) # w/ ala
+# node_list = filter(lambda x: 'gpu' in x,[n for n in node_dct.keys()])

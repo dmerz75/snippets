@@ -5,7 +5,7 @@ my_library = os.path.expanduser('~/.pylib')
 sys.path.append(my_library)
 
 # imports from my_library
-from cp import *
-from regex import *
+from mylib.cp import *
+from mylib.regex import *
 
 

@@ -3,6 +3,6 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl_title_labels
 # --
-plt.title('the_title')
-plt.ylabel('ylabel')
-plt.xlabel('xlabel')
+plt.title('the $\alpha$ title')
+plt.ylabel('$\lambda$ (nm)')
+plt.xlabel('$\nu$ ($s^-1$)')

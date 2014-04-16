@@ -1,0 +1,4 @@
+# name: numpy
+# key: numpy
+# --
+import numpy as np

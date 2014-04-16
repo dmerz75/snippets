@@ -9,7 +9,12 @@ ax1.legend(["data1",
         # "data2",
         # "data3",
         ],
-        loc=2,
-        prop={'size':20})
+        loc=1,
+        prop={'size':16})
 leg = plt.gca().get_legend()
+for label in leg.get_lines():
+    label.set_linewidth(2.5)
 leg.draw_frame(False)
+
+
+

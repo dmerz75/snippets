@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# name: findall
+# contributor: Dale R. Merz Jr.
+# key: findall
+# --
+my_library = os.path.expanduser('~/.pylib')
+sys.path.append(my_library)
+
+#  ---------------------------------------------------------  #
+#  findall_files:                                             #
+#  ---------------------------------------------------------  #
+from mylib.findall_files import *
+
+dct_find = {'cwd':my_dir,'pattern':'.pkl'}
+x = findall_files(dct_find)
+lst_pickles = x.get_files()

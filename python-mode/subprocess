@@ -1,9 +1,15 @@
 # name: subprocess
 # key: subprocess
 # --
-def run_command(script):
-    pipe=subprocess.Popen(['python',script],stdin=subprocess.PIPE,
-                    stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
+import subprocess
+
+def run_command(invocation,script):
+    pipe=subprocess.Popen([invocation,script],stdin=subprocess.PIPE,
+                          stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
     stdout,stderr = pipe.communicate()
     print 'stdout >> ',stdout
     print 'stderr >> ',stderr
+
+# os.chdir(os.path.dirname(script))
+# run_command('touch',script)
+# os.chdir(my_dir)
