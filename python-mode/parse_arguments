@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: parse_arguments
+# key: parse_arguments
+# group: argparser
+# --
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='$1')
+    $0
+    return parser.parse_args()
+
+import argparse
+#  ---------------------------------------------------------  #
+#  argparse                                                   #
+#  ---------------------------------------------------------  #
+parser = argparse.ArgumentParser()
+parser.add_argument("-m","--makefile_arg",help="supply Makefile argument")
+parser.add_argument("-p","--procs",help="number of processors",type=int)
+parser.add_argument("-n","--node",help="type of node for computation")
+args = vars(parser.parse_args())
+# args['makefile_arg']
+# args['procs']
+# args['node'])

@@ -15,8 +15,9 @@ def parse_arguments():
     parser.add_argument("-m","--makefile_arg",help="supply Makefile argument")
     parser.add_argument("-p","--procs",help="number of processors",type=int)
     parser.add_argument("-n","--node",help="type of node for computation")
-    # args = vars(parser.parse_args())
-    return parser.parse_args()
+    args = vars(parser.parse_args())
+    # return parser.parse_args()
+    return args
 
 args = parse_arguments()
 ''' Options:
