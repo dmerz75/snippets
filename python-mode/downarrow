@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+# name: downarrow
+# contributor: Dale R. Merz Jr.
+# key: downarrow
+# --
+# drawing
+import matplotlib.patches as mpatches
+import matplotlib.path as mpath
+
+# downarrow definitions
+x_actual = [8.3,32.6,88.7]
+x_initial = x_actual[0]
+# x_actual = [88.7]
+# x_label  = [x-x_actual[0] for x in x_actual]
+# x_label  = [x-x_initial for x in x_actual]
+x_label = x_actual
+y_actual = [184.4,202.0,210.0]
+# y_actual = [210.0]
+y_point = [220,220,220]
+# y_point = [220]
+y_label = [y+50 for y in y_point]
+
+# downarrow function!
+def draw_down_arrow(x,y,xlabel,yplus,color='black',style='->'):
+    plt.annotate(str(xlabel),xy=(x,y),
+                 xytext=(x,yplus),
+                 arrowprops=dict(facecolor=color,
+                                 arrowstyle=style))
+
+# circle function
+def draw_ellipse(x,y):
+    print 'drawing circle around: ',x,y
+    ell = mpatches.Ellipse((x,y),8,17)
+    ell.set_alpha(0.9)
+    # ell.set_facecolor()
+    # ell.set_edgecolor()
+    # ell.set_linestyle()
+    # ell.set_linewidth()
+    ell.set_fill(False)
+    # ell.set_color()
+    # ell.set_label()
+    ax1.add_patch(ell)
+
+# downarrow for loop!
+[draw_down_arrow(x_actual[i],y_point[i],x_label[i],y_label[i]) for i in range(len(x_actual))]
+
+# ellipse loop!
+[draw_ellipse(x_actual[i],y_actual[i]) for i in range(len(x_actual))]
+
+# downarrow frames file
+data_stack = np.vstack((x_actual,x_label,y_actual,y_point,y_label))
+data_stack = np.transpose(data_stack)
+print data_stack
+# sys.exit()
+force_name = 'force_frames_%s.dat' % data_name
+np.savetxt(force_name,data_stack,fmt='%0.1f ' '%0.1f ' '%0.1f ' \
+           '%0.0f ' '%0.0f ',header='x, xlabel, y, ypoint,y_labelp')
