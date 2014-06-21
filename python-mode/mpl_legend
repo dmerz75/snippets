@@ -15,6 +15,3 @@ leg = plt.gca().get_legend()
 for label in leg.get_lines():
     label.set_linewidth(2.5)
 leg.draw_frame(False)
-
-
-
