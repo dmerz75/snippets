@@ -1,4 +1,4 @@
 # name: shebang
 # key: shebang
 # --
-#!/bin/sh
+#!/bin/bash

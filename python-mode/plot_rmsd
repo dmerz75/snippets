@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+# name: plot_rmsd
+# contributor: Dale R. Merz Jr.
+# key: plot_rmsd
+# --
+def load_rmsd(filename):
+    rmsd = np.loadtxt(filename,skiprows=1)
+    print rmsd.shape
+    x = np.linspace(0,rmsd.shape[0]/10,rmsd.shape[0])
+    x = moving_average(x,50)
+    y = moving_average(rmsd[::,1],50)
+    return x,y
+
+def plot_rmsd(x,y,color):
+    plt.plot(x,y,color)
+
+
+idn = 'align' # back, pr, align, domain
+
+lst_labels = ['Ala','102377','495917','864904']
+bb_102 = 'protein_backbone_align-start_rmsd_102377.dat'
+bb_495 = 'protein_backbone_align-start_rmsd_495917.dat'
+bb_864 = 'protein_backbone_align-start_rmsd_864904.dat'
+bb_ala = 'protein_backbone_align-start_rmsd_ala.dat'
+pr_102 = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_102377.dat'
+pr_495 = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_495917.dat'
+pr_864 = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_864904.dat'
+pr_ala = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_ala.dat'
+al_102 = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_align_102377.dat'
+al_495 = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_align_495917.dat'
+al_864 = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_align_864904.dat'
+al_ala = 'protein_backbone_align-start_rmsd_resid187-385_rmsd_align_ala.dat'
+
+lst_labels = ['Protein','C-Term vs. Protein','C-Term vs. C-Term']
+# rmsd_by_domain = [bb_ala,pr_ala,al_ala]
+# rmsd_by_domain = [bb_102,pr_102,al_102]
+# rmsd_by_domain = [bb_495,pr_495,al_495]
+rmsd_by_domain = [bb_864,pr_864,al_864]
+idn = 'domain_864'
+
+if idn == 'back':
+    x,y = load_rmsd(bb_ala)
+    plot_rmsd(x,y,'k-')
+    x,y = load_rmsd(bb_102)
+    plot_rmsd(x,y,'r-')
+    x,y = load_rmsd(bb_495)
+    plot_rmsd(x,y,'g-')
+    x,y = load_rmsd(bb_864)
+    plot_rmsd(x,y,'b-')
+elif idn == 'pr':
+    x,y = load_rmsd(pr_ala)
+    plot_rmsd(x,y,'k-')
+    x,y = load_rmsd(pr_102)
+    plot_rmsd(x,y,'r-')
+    x,y = load_rmsd(pr_495)
+    plot_rmsd(x,y,'g-')
+    x,y = load_rmsd(pr_864)
+    plot_rmsd(x,y,'b-')
+elif idn == 'align':
+    lst_files = [al_ala,al_102,al_495,al_864]
+    lst_colors = ['k-','r-','g-','b-']
+    for i,f in enumerate(lst_files):
+        x,y = load_rmsd(f)
+        plot_rmsd(x,y,lst_colors[i])
+elif idn.startswith('domain'):
+    lst_colors = ['k-','r-','g-','b-']
+    for i,f in enumerate(rmsd_by_domain):
+        x,y = load_rmsd(f)
+        plot_rmsd(x,y,lst_colors[i])

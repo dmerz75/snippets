@@ -23,4 +23,5 @@ print "calling save_fig ..."
 # example: save_fig(-4,'fig',name)
 # example: save_fig(-3,'',name)
 # plt.show()
+# save_fig(0,'fig','fname_%s' % idn)
 save_fig(0,'fig','example1')

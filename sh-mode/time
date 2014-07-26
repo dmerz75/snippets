@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: time
+# key: time
+# --
+STARTTIME=$(date +%s)
+
+ENDTIME=$(date +%s)
+TOTALTIME=$(($ENDTIME-$STARTTIME))
+printf $TOTALTIME > time.txt

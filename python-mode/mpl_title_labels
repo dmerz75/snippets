@@ -3,6 +3,6 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl_title_labels
 # --
-plt.title('the $\alpha$ title')
-plt.ylabel('$\lambda$ (nm)')
-plt.xlabel('$\nu$ ($s^-1$)')
+plt.title('RMSD')
+plt.ylabel('RMSD ($\AA$)')
+plt.xlabel('Time (ns)')

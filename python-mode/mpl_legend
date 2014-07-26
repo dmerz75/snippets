@@ -5,11 +5,12 @@
 # --
 # LEGEND  
 # locations: quadrants - 1,2,3,4
-ax1.legend(["data1",
-        # "data2",
-        # "data3",
+ax1.legend([lst_labels[0],
+            lst_labels[1],
+            lst_labels[2],
+            # lst_labels[3],
         ],
-        loc=1,
+        loc=4,
         prop={'size':16})
 leg = plt.gca().get_legend()
 for label in leg.get_lines():
