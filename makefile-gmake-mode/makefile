@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: make
-# key: make
+# name: makefile
+# key: makefile
 # --
 # Compiler
 CC = gcc
