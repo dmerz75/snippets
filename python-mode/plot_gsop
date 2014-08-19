@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+# name: plot_gsop
+# contributor: Dale R. Merz Jr.
+# key: plot_gsop
+# --
+# snippet: plot_gsop
+#  ---------------------------------------------------------  #
+#  Import Data! (2/3)                                         #
+#  ---------------------------------------------------------  #
+
+plot_type = 'ext' # ext or other
+data_name = 'round1'
+
+for path in glob(os.path.join(my_dir,'*/pull[0-9][0-9].dat')):
+    print path
+    data = np.loadtxt(path)
+    if plot_type == 'ext':
+        x = data[::,0]/20000000
+        x = x - x[0]
+        print 'used EXTENSION'
+    else:
+        x = data[::,0]
+        x = x/200000
+        print 'used FRAME'
+
+    print x[0],x[-1],'x initial, x final'
+    xinitial = x[0]
+    xfinal = x[-1]
+    # x = moving_average(x,50)
+
+    print len(x),x[0]
+
+    y = data[::,2]*70
+    y = moving_average(y,50)
+    x = np.linspace(xinitial,xfinal,len(y))
+    print len(y)
+    print len(x)
+
+    # print first_dist
+    print data.shape
+    plt.plot(x,y)

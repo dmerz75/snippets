@@ -3,6 +3,7 @@
 # contributor: Dale R. Merz Jr.
 # key: plot_rmsd
 # --
+# snippet: plot_rmsd
 def load_rmsd(filename):
     rmsd = np.loadtxt(filename,skiprows=1)
     print rmsd.shape

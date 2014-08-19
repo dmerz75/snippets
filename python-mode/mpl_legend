@@ -3,8 +3,9 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl_legend
 # --
-# LEGEND  
+# LEGEND
 # locations: quadrants - 1,2,3,4
+lst_labels = ['sec1','sec2','sec3']
 ax1.legend([lst_labels[0],
             lst_labels[1],
             lst_labels[2],
