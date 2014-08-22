@@ -1,0 +1,25 @@
+# name: wlc
+# key: wlc
+# --
+def plot_wlc(contour,persistence,color_string,start=0.7,stop=0.96):
+    # 1
+    # w = WormLikeChain()
+    # # z = w.zdomain(contour)
+    # z,F = w.compute_wlc_fit(contour,persistence)
+    # plt.plot(z,F,color_string,linewidth=3.0)
+    # 2
+    w = WormLikeChain()
+    z = w.zdomain(contour,start,stop)
+    z,F = w.compute_wlc_fit(contour,persistence,z)
+    plt.plot(z,F,color_string,linewidth=2.5)
+
+# w = WormLikeChain(150.0,0.4)
+# # w.print_class()
+# x,y = w.return_Force()
+# plt.plot(x,y,'r--')
+
+lst_colors = ['k--','r--','g--','c--']
+plot_wlc(154.0,0.4,lst_colors[0],0.7,0.96)
+plot_wlc(86.0,0.4,lst_colors[1],0.7,0.96)
+plot_wlc(76.0,0.4,lst_colors[2],0.7,0.96)
+plot_wlc(24.0,0.4,lst_colors[3],0.5,0.96)
