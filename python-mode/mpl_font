@@ -6,8 +6,8 @@
 plt.subplots_adjust(left=0.155,right=0.96,top=0.895,bottom=0.175)
 fig.set_size_inches(7.4,5.1)
 font_prop_large = matplotlib.font_manager.FontProperties(size='large')
-run_control     = {'family':'sans-serif',
-                   'weight':'normal',
-                    'size'  :'24',
-                    }
-matplotlib.rc('font',**run_control)
+dct_font     = {'family':'sans-serif',
+                'weight':'normal',
+                'size'  :'24',
+}
+matplotlib.rc('font',**dct_font)

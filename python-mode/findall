@@ -3,8 +3,8 @@
 # contributor: Dale R. Merz Jr.
 # key: findall
 # --
-# my_library = os.path.expanduser('~/.pylib')
-# sys.path.append(my_library)
+my_library = os.path.expanduser('~/.pylib')
+sys.path.append(my_library)
 
 #  ---------------------------------------------------------  #
 #  findall_files:                                             #

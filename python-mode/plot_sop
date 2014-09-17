@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+# name: plot_sop
+# contributor: Dale R. Merz Jr.
+# key: plot_sop
+# --
+# snippet: plot_sop
+from glob import glob
+result_type = 'sop'
+plot_type = 'ext' # ext | frame
+data_name = 'orig'
+point_tally = 3100000
+ma_value = 500
+
+for path in enumerate(glob(os.path.join(my_dir,'*/out*.dat'))):
+    print path
+    data = np.loadtxt(path)
+    print data.shape
+    force = data[101::,3]*70 # (1,000,000 min) - print out 10000
+    end_to_end = data[101::,2]
+    # print data[100,::],'\n',data[101,::],'\n',data[102,::] # --> check!
+    # print data[101,::] # --> check!
+    # ext = data[101::,12] # 0.1,0.2
+    extension = end_to_end[-1] - end_to_end[0]
+    print 'extension',extension,'forces:',force.shape
+    extension_array = np.linspace(0.0,extension,force.shape[0])
+    plt.plot(extension_array,force)

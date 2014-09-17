@@ -4,38 +4,53 @@
 # key: plot_gsop
 # --
 # snippet: plot_gsop
-#  ---------------------------------------------------------  #
-#  Import Data! (2/3)                                         #
-#  ---------------------------------------------------------  #
+from glob import glob
 
-plot_type = 'ext' # ext or other
-data_name = 'round1'
-
-for path in glob(os.path.join(my_dir,'*/pull[0-9][0-9].dat')):
+def plot_gsop(path):
     print path
     data = np.loadtxt(path)
+    print data.shape
     if plot_type == 'ext':
-        x = data[::,0]/20000000
-        x = x - x[0]
+        end_to_end = data[:point_tally:,1] * 0.1 # Angstroms to nm
+        extension = end_to_end - end_to_end[0]
         print 'used EXTENSION'
-    else:
-        x = data[::,0]
-        x = x/200000
+        print 'end_to_end:',end_to_end[0],end_to_end[-1]
+    elif plot_type == 'frame':
+        frames = data[:point_tally:,0]
+        extension = frames/200000
         print 'used FRAME'
 
-    print x[0],x[-1],'x initial, x final'
-    xinitial = x[0]
-    xfinal = x[-1]
-    # x = moving_average(x,50)
+    extension = moving_average(extension,ma_value)
+    print 'extension:',extension[0],extension[-1]
+    # continue
 
-    print len(x),x[0]
+    forces_raw = data[:point_tally:,3] * 70
+    force = moving_average(forces_raw,ma_value)
+    # continue
 
-    y = data[::,2]*70
-    y = moving_average(y,50)
-    x = np.linspace(xinitial,xfinal,len(y))
-    print len(y)
-    print len(x)
+    if force.shape[0] != extension.shape[0]:
+        print force.shape[0]
+        print extension.shape[0]
+        print 'must be equal!'
+        sys.exit(1)
+    print 'maximum_force:',max(force)
+    plt.plot(extension,force)
+    # break
 
-    # print first_dist
-    print data.shape
-    plt.plot(x,y)
+
+result_type = 'gsop'
+plot_type = 'ext' # ext | frame
+data_name = 'orig'
+point_tally = 3100000
+ma_value = 500
+
+directory = 'gsop_nbd_csu'
+csu = glob(os.path.join(my_dir,'%s/*/pull.2*.dat' % directory))
+
+for o in orig:
+    # print o
+    seed = o.split('/')[-2].split('__')[-2].split('_')[0]
+    print seed
+    lst_seeds.append(seed)
+    plot_gsop(o)
+    # break

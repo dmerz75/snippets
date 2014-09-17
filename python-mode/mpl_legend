@@ -5,14 +5,21 @@
 # --
 # LEGEND
 # locations: quadrants - 1,2,3,4
-lst_labels = ['sec1','sec2','sec3']
-ax1.legend([lst_labels[0],
-            lst_labels[1],
-            lst_labels[2],
-            # lst_labels[3],
-        ],
-        loc=4,
-        prop={'size':16})
+# lst_labels = ['sec1','sec2','sec3']
+lst_labels = lst_seeds
+try:
+    ax1.legend([lst_labels[0],
+                lst_labels[1],
+                lst_labels[2],
+                lst_labels[3],
+            ],
+           loc=4,
+               prop={'size':16})
+except:
+    ax1.legend([lst_labels[0],
+            ],
+           loc=4,
+               prop={'size':16})
 leg = plt.gca().get_legend()
 for label in leg.get_lines():
     label.set_linewidth(2.5)

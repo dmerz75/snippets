@@ -11,12 +11,19 @@ def save_fig(i,subdir,fname):
     else:
         content_dir = os.path.join('/'.join(my_dir.split('/')[0:i]),subdir)
     if not os.path.exists(content_dir): os.makedirs(content_dir)
-    # Save in PNG and EPS formats
-    abs_file_name = os.path.join(content_dir,fname)
-    plt.savefig('%s.png' % abs_file_name)
-    plt.savefig('%s.eps' % abs_file_name)
-    # plt.savefig('%s.jpg' % abs_file_name)
-    os.chdir(content_dir)
+    dir_filename = os.path.join(content_dir,fname)
+    fp_filename = os.path.join(dir_filename,fname)
+    if not os.path.exists(dir_filename): os.makedirs(dir_filename)
+    # Save in PNG,EPS,SVG,PDF,TIFF,JPG formats
+    # PIL, wxpython2.8, QT5Agg may be necessary
+    # Image.open('%s.png' % fp_filename).save('%s.jpg' % fp_filename,'JPEG')
+    plt.savefig('%s.png' % dir_filename)
+    plt.savefig('%s.png' % fp_filename)
+    plt.savefig('%s.eps' % fp_filename)
+    plt.savefig('%s.svg' % fp_filename)
+    plt.savefig('%s.pdf' % fp_filename)
+    plt.savefig('%s.tiff' % fp_filename)
+    plt.savefig('%s.jpg' % fp_filename)
 
 print "calling save_fig ..."
 # save_pic_data(levels_back,subdir,name)
@@ -24,4 +31,5 @@ print "calling save_fig ..."
 # example: save_fig(-3,'',name)
 # plt.show()
 # save_fig(0,'fig','fname_%s' % idn)
-save_fig(0,'fig','example1')
+# save_fig(0,'fig','example1')
+save_fig(0,'fig','%s_%s_%s' % (result_type,plot_type,data_name))
