@@ -3,11 +3,14 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl_font
 # --
-plt.subplots_adjust(left=0.155,right=0.96,top=0.895,bottom=0.175)
-fig.set_size_inches(7.4,5.1)
+plt.subplots_adjust(left=0.155,right=0.955,top=0.895,bottom=0.175)
 font_prop_large = matplotlib.font_manager.FontProperties(size='large')
-dct_font     = {'family':'sans-serif',
-                'weight':'normal',
-                'size'  :'24',
-}
+fig.set_size_inches(9.0,5.1)
+# for k in matplotlib.rcParams.keys():
+#     print k
+dct_font = {'family':'sans-serif',
+            'weight':'normal',
+            'size'  :'24'}
 matplotlib.rc('font',**dct_font)
+matplotlib.rcParams['legend.frameon'] = False
+# print matplotlib.rcParams['figure.dpi']

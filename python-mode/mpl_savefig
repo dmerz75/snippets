@@ -17,13 +17,15 @@ def save_fig(i,subdir,fname):
     # Save in PNG,EPS,SVG,PDF,TIFF,JPG formats
     # PIL, wxpython2.8, QT5Agg may be necessary
     # Image.open('%s.png' % fp_filename).save('%s.jpg' % fp_filename,'JPEG')
-    plt.savefig('%s.png' % dir_filename)
-    plt.savefig('%s.png' % fp_filename)
-    plt.savefig('%s.eps' % fp_filename)
-    plt.savefig('%s.svg' % fp_filename)
-    plt.savefig('%s.pdf' % fp_filename)
-    plt.savefig('%s.tiff' % fp_filename)
-    plt.savefig('%s.jpg' % fp_filename)
+    # dpi = 80 or 300
+    dpi = 80
+    plt.savefig('%s.png' % dir_filename,dpi=dpi)
+    plt.savefig('%s.png' % fp_filename,dpi=dpi)
+    plt.savefig('%s.eps' % fp_filename,dpi=dpi)
+    plt.savefig('%s.svg' % fp_filename,dpi=dpi)
+    plt.savefig('%s.pdf' % fp_filename,dpi=dpi)
+    plt.savefig('%s.tiff' % fp_filename,dpi=dpi)
+    plt.savefig('%s.jpg' % fp_filename,dpi=dpi)
 
 print "calling save_fig ..."
 # save_pic_data(levels_back,subdir,name)

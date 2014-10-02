@@ -6,26 +6,29 @@
 # snippet: plot_sopnucleo
 from glob import glob
 
-result_type = 'gsop'
+result_type = 'sopnucleo-fe'
 run_type = 'atp' # atp | adp
 plot_type = 'frame' # ext, frame
+data_name = 'suppmaterial'
 point_tally = 306000
-ma_value = 100
+ma_value = 1000
 
-for i,path in enumerate(glob(os.path.join(my_dir,'%s/*/out*80.dat' % run_type))):
+
+def plot_sopnucleo(path):
     print path
     data = np.loadtxt(path)
     print data.shape
 
-    f = data[::,3]*70
+    f = data[:point_tally:,3]*70
     print f.shape,'maximum force:',max(f)
     if plot_type == 'ext':
         force = moving_average(f,ma_value)
     elif plot_type == 'frame':
         force = f
+        force = moving_average(f,ma_value)
 
     # Column 2 (3rd): end_to_end      # USE THIS!
-    end_to_end = data[::,2]/10
+    end_to_end = data[:point_tally:,2]/10
     print 'end_to_end:',end_to_end[0],end_to_end[-1]
     extension = moving_average(end_to_end-end_to_end[0],ma_value)
     print 'extension from end_to_end',extension[0],extension[-1]
@@ -34,19 +37,24 @@ for i,path in enumerate(glob(os.path.join(my_dir,'%s/*/out*80.dat' % run_type)))
     # Column 10 (11th): extension of tension
     ext = data[::,10]*0.1
     print 'extension of tension:',ext.shape,ext[0],ext[-1]
-    # # ext = moving_average(ext,ma_value)
+    # # ext = moving_average(ext,75)
     # extension = np.linspace(0,ext[-1],force.shape[0])
 
     # Column 1 (0th): frame * 10^-5
-    frame = data[:point_tally:,0]*0.00001
+    # frame = data[:point_tally:,0]*0.00001 # 5000
+    frame = data[:point_tally:,0]*0.00000001   # x 1000
+    frame = moving_average(frame,ma_value)
 
     # plt.plot(ext,force)
     if plot_type == 'ext':
         plt.plot(extension,force)
     elif plot_type == 'frame':
         plt.plot(frame,force)
-    # if i > 2:
-    #     break
 
-    # plt.plot(ext,force)
-    plt.plot(extension,force)
+sopnucleos = glob(os.path.join(my_dir,'%s/*/out*80.dat' % run_type))
+
+for i,sn in enumerate(sopnucleos):
+    # print i,sn
+    plot_sopnucleo(sn)
+    if i > 2:
+        break
