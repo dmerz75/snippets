@@ -11,22 +11,24 @@ CFLAGS   = -ansi -std=gnu99
 CFLAGS_1 = -ansi -pedantic -std=gnu99 -Wall -W
 CFLAGS_2 = -Wconversion -Wshadow -Wcast-qual -Wwrite-strings -g -O2
 
-# Objects
-OBJECTS = $1.o $2.o
-CFILES = $1.c $2.c
-
+# Macros
 MACRO1 = -D$3
 
-example1:
-	$(CC) $(CF) $(MACRO1) $(CFILES) -lm -o run_prog
+# Files/Objects
+OBJECTS = $2.o
+CFILES = $2.c
 
-main.exe : $(OBJECTS)
-	$(CC) $(CFLAGS) $(MACRO1) $(OBJECTS) -lm -o run_prog
+# make commands
+basic:
+	$(CC) $(CF) $(MACRO1) $(CFILES) -lm -o run_$1
+
+main: $(OBJECTS)
+	$(CC) $(CFLAGS) $(MACRO1) $(OBJECTS) -lm -o run_$1
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $<
 
 clean:
-	rm -r *.o run_prog*
+	rm -r *.o run_$1*
 run:
-	./run_prog
+	./run_$1
