@@ -3,24 +3,11 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl_legend
 # --
-# LEGEND
-# locations: quadrants - 1,2,3,4
-# lst_labels = ['sec1','sec2','sec3']
-lst_labels = lst_seeds
-try:
-    ax1.legend([lst_labels[0],
-                lst_labels[1],
-                lst_labels[2],
-                lst_labels[3],
-            ],
-           loc=4,
-               prop={'size':16})
-except:
-    ax1.legend([lst_labels[0],
-            ],
-           loc=4,
-               prop={'size':16})
+lst_labels = ['$1','$2',]
+# legend
+# handles, labels = ax1.get_legend_handles_labels()
+# ax1.legend(handles, labels,prop={'size':10})
+ax1.legend(lst_labels,loc=2,prop={'size':18})
 leg = plt.gca().get_legend()
 for label in leg.get_lines():
     label.set_linewidth(2.5)
-leg.draw_frame(False)

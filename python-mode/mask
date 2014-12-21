@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# name: mask
+# contributor: Dale R. Merz Jr.
+# key: mask
+# --
+# y
+y1 = ma.array(y)
+y2 = ma.masked_less(y,-10) # mask everything < -10
+y2 = y2.filled(-10) # Fill with zeroes
+# for i in range(len(y)):
+#     print y[i],y1[i],y2[i]

@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# name: mpl_forcequench
+# contributor: Dale R. Merz Jr.
+# key: mpl_forcequench
+# --
+force_quench_initial = $1
+def get_force_quench():
+    fq = FindForceQuench()
+    fq.find_max_near(force_quench_initial,x.extension,x.force)
+    print 'local_maximum:',fq.near_x,fq.near_y
+get_force_quench()

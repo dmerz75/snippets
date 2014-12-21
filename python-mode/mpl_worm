@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# name: mpl_worm
+# contributor: Dale R. Merz Jr.
+# key: mpl_worm
+# --
+def get_wormlikechain(dct):
+    contour_lengths = []
+    for k in sorted(dct.keys()):
+        print k
+        wlc = WormLikeChain(dct[k]['Lc'],dct[k]['Lp'])
+        wlc.zdomain(dct[k]['start'],dct[k]['stop'])
+        wlc.compute_wlc_fit(wlc.Lc,wlc.Lp,wlc.z)
+        x,y = wlc.return_Force(270)
+        plt.plot(x,y+35.0,'r-',linewidth=1.5)
+        contour_lengths.append(x[-1])
+    print 'contour_lengths:'
+    print contour_lengths
+    print np.array(contour_lengths) - force_quench_initial
+    for i,c in enumerate(contour_lengths):
+        if i == 0:
+            pass
+        else:
+            print c-contour_lengths[i-1]
+
+# 131
+dct_wlc = {}
+dct_wlc[22] = {'Lc':18.8,'Lp':0.4,'start':0.4,'stop':0.98}
+dct_wlc[58] = {'Lc':61.0,'Lp':0.4,'start':0.5,'stop':0.97}
+# dct_wlc[67] = {'Lc':73.0,'Lp':0.4,'start':0.7,'stop':0.97}
+dct_wlc[80] = {'Lc':82.8,'Lp':0.4,'start':0.70,'stop':0.97}
+dct_wlc[148] = {'Lc':153.0,'Lp':0.4,'start':0.70,'stop':0.97}
+
+# if plot_type == 'extension' and data_name != 'all':
+#     get_wormlikechain(dct_wlc)
+if (plot_type == 'ext') or (plot_type == 'extension'):
+    get_wormlikechain(dct_wlc)

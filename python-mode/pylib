@@ -7,5 +7,6 @@ sys.path.append(my_library)
 # imports from my_library
 from mylib.cp import *
 from mylib.regex import *
-# from plot.wlc import WormLikeChain
+# from plot.WLC import WormLikeChain
 from plot.SOP import *
+# from mdanalysis.MoleculeUniverse import MoleculeUniverse

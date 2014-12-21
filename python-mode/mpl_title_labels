@@ -3,6 +3,24 @@
 # contributor: Dale R. Merz Jr.
 # key: mpl_title_labels
 # --
-plt.title('RMSD')
-plt.ylabel('RMSD ($\AA$)')
-plt.xlabel('Time (ns)')
+# plt.title('RMSD')
+# Y
+plt.ylabel("Force (pN)")
+ax1.set_ylim(-12,342)
+
+# X
+if plot_type == 'extension':
+    plt.xlabel('Extension (nm)')
+    ax1.set_xlim(-2,82)
+elif plot_type == 'time':
+    plt.xlabel('t (ms)')
+    ax1.set_xlim(-0.5,38)
+elif plot_type == 'frame':
+    plt.xlabel('Frame # (x 1000)')
+    ax1.set_xlim(-0.5,9.5)
+    plt.xticks(np.linspace(0,9.0,19),fontsize=10)
+    # ax3.set_xticks(np.linspace(0,32.0,17))
+    # # Changing the label's font-size
+    # ax1.tick_params(axis='x',labelsize=8)
+    # ax2.tick_params(axis='x',labelsize=8)
+    # ax3.tick_params(axis='x',labelsize=8)
