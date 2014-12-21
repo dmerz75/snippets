@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-# name: mplrc
 # contributor: Dale R. Merz Jr.
-# key: mplrc
+# name: mpl_rc
+# key: mpl_rc
+# group: mpl
 # --
 matplotlib.rcParams['$1'] = $2

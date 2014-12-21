@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-# name: mpl_xy_lim_tick
 # contributor: Dale R. Merz Jr.
-# key: mpl_xy_lim_tick
+# name: mpl_xy
+# key: mpl_xy
+# group: mpl
 # --
+# mpl_xy: set_xlim,set_ylim,xticks,yticks
 ax1.set_xlim(-0.1,4.1)
 ax1.set_ylim(-0.1,6.1)
 plt.xticks([0.0,1.0,2.0,3.0,4.0])
