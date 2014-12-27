@@ -41,7 +41,7 @@ data_name = '$3' # seed #
 #  mpl - available expansions                                 #
 #  ---------------------------------------------------------  #
 mpl_font
-mpl_title_labels
-mpl_xy_lim_tick
+mpl_label
+mpl_xy
 mpl_legend
 mpl_savefig
