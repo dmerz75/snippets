@@ -3,6 +3,7 @@
 # name: mpl_font
 # key: mpl_font
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 # plt.subplots_adjust(left=0.180,right=0.960,top=0.950,bottom=0.160)
 # font_prop_large = matplotlib.font_manager.FontProperties(size='large')

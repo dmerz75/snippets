@@ -3,6 +3,7 @@
 # name: mpl_worm
 # key: mpl_worm
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 def get_wormlikechain(dct):
     contour_lengths = []

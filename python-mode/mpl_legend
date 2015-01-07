@@ -3,6 +3,7 @@
 # name: mpl_legend
 # key: mpl_legend
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 # legend
 # 1:

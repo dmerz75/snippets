@@ -3,5 +3,6 @@
 # name: mpl_rc
 # key: mpl_rc
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 matplotlib.rcParams['$1'] = $2

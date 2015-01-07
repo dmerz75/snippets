@@ -3,6 +3,7 @@
 # name: mpl_
 # key: mpl_
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 #  ---------------------------------------------------------  #
 #  expand for moving_average                                  #

@@ -3,9 +3,11 @@
 # name: mpl_forcequench
 # key: mpl_forcequench
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
-def get_force_quench(xvalue):
+def get_force_quench(xval,xrange,ext,force):
     fq = FindForceQuench()
-    fq.find_max_near(xvalue,x.extension,x.force)
+    fq.find_max_near(xval,xrange,ext,force)
     print 'local_maximum:',fq.near_x,fq.near_y
-get_force_quench(3.0)
+    return fq.near_x,fq.near_y
+# near_x,near_y = get_force_quench(85.0,3.0,X.extension,X.force)

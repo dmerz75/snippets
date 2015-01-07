@@ -3,6 +3,7 @@
 # name: mpl_xy
 # key: mpl_xy
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 # mpl_xy: set_xlim,set_ylim,xticks,yticks
 ax1.set_xlim(-0.1,4.1)

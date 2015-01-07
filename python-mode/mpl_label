@@ -3,6 +3,7 @@
 # name: mpl_label
 # key: mpl_label
 # group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 # mpl_label
 for i in range(len(ax)):
