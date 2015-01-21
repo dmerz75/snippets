@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_tick
+# key: mpl_tick
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+# We change the fontsize of minor ticks label
+# plt.tick_params(axis='both', which='major', labelsize=10)
+# plt.tick_params(axis='both', which='minor', labelsize=8)
+# plt.xticks(np.linspace(0.0,32.0,17),fontsize=10)
+# ax1.set_xticks(np.linspace(0,32.0,17),fontsize=10)
+
+# ax1.xaxis.set_major_locator(np.linspace(0.0,32.0,5.0))
+# ax1.xaxis.set_minor_locator(np.linspace(0,32.0,17))
+
+# majorFormatter = FormatStrFormatter('%d')
+minorLocator = matplotlib.ticker.MultipleLocator(2)
+majorLocator = matplotlib.ticker.MultipleLocator(4)
+ax1.xaxis.set_minor_locator(minorLocator)
+ax1.xaxis.set_major_locator(majorLocator)
+ax1.tick_params(which='both', width=1)
+ax1.tick_params(which='major', length=9)
+ax1.tick_params(which='minor', length=5, color='k')
