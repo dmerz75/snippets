@@ -17,3 +17,11 @@
 leg = plt.gca().get_legend()
 for label in leg.get_lines():
     label.set_linewidth(2.5)
+
+# some lines in legend!
+# print len(ax1.lines),ax1.lines
+# lst_labels = ['0.3','0.4','0.5','0.6','0.7']
+# for i,line in enumerate(ax1.lines[2:7]):
+#     print lst_labels[i]
+#     line.set_label(lst_labels[i])
+# ax1.legend()

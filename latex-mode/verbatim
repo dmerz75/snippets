@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: verbatim
+# key: verbatim
+# group: mylatex
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+\begin{verbatim}
+$1
+\end{verbatim}

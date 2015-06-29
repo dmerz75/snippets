@@ -6,13 +6,14 @@
 # expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 #  ---------------------------------------------------------  #
-#  expand for moving_average                                  #
+#  functions                                                  #
 #  ---------------------------------------------------------  #
 # mpl_moving_average
-
+# mpl_forcequench
+# mpl_worm
 
 #  ---------------------------------------------------------  #
-#  Start matplotlib (1/3)                                     #
+#  Start matplotlib (1/4)                                     #
 #  ---------------------------------------------------------  #
 import matplotlib
 # default - Qt5Agg
@@ -27,22 +28,36 @@ fig = plt.figure(0)
 gs = GridSpec(1,1)
 ax1 = plt.subplot(gs[0,:])
 # ax2 = plt.subplot(gs[1,:-1])
+ax = [ax1]
 
 #  ---------------------------------------------------------  #
-#  Import Data! (2/3)                                         #
+#  Import Data! (2/4)                                         #
 #  ---------------------------------------------------------  #
 result_type = '$1' # sop | sopnucleo | gsop | namd
 plot_type = '$2' # fe | tension | rmsd | rdf
 data_name = '$3' # seed #
+# save_fig(0,'fig','%s_%s_%s' % (result_type,plot_type,data_name))
+combined_name = '%s_%s_%s' % (result_type, plot_type, data_name)
+
+mpl_myargs_begin
+
+#  ---------------------------------------------------------  #
+#  Import Data! (3/4)                                         #
+#  ---------------------------------------------------------  #
 
 
 
 #  ---------------------------------------------------------  #
-#  Make final adjustments: (3/3)                              #
+#  Make final adjustments: (4/4)                              #
 #  mpl - available expansions                                 #
 #  ---------------------------------------------------------  #
+mpl_rc
 mpl_font
 mpl_label
 mpl_xy
+mpl_ticks
+mpl_tick
+mpl_minorticks
 mpl_legend
 mpl_savefig
+mpl_myargs_end

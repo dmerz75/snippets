@@ -1,11 +1,12 @@
-# -*- mode: snippet -*-
-# name: myargs
-# key: myargs
-# group: argparser
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_myargs_begin
+# key: mpl_myargs_begin
+# group: mpl
 # expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 #  ---------------------------------------------------------  #
-#  argparse                                                   #
+#  mpl_myargs_begin                                           #
 #  ---------------------------------------------------------  #
 import argparse
 
@@ -13,9 +14,7 @@ def parse_arguments():
     ''' Parse script's arguments.
     '''
     parser = argparse.ArgumentParser()
-    parser.add_argument("-m","--makefile_arg",help="supply Makefile argument")
-    parser.add_argument("-p","--procs",help="number of processors",type=int)
-    parser.add_argument("-n","--node",help="type of node for computation")
+    parser.add_argument("-o","--option",help="select None,publish,show")
     args = vars(parser.parse_args())
     return args
 
@@ -25,3 +24,4 @@ args['makefile']
 args['procs']
 args['node'])
 '''
+option = args['option']

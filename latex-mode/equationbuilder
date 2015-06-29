@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: equationbuilder
+# key: equationbuilder
+# group: description_equation
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+\documentclass[]{article}
+
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{pdflscape}
+\usepackage{rotating}
+
+\pagestyle{empty}
+
+%% -----Start Document-----
+\begin{document}
+
+%% --- Part 1 --- (Plain - Cropped Closely)
+\Huge %% \scriptsize \small \normalsize \large \LARGE \huge \Huge
+
+\begin{landscape}
+\resizebox{24cm}{!}{$
+$$
+\begin{array}{rcl}
+  % x
+  f = \frac{k_{B}T}{l_{p}} \left[\frac{1}{4(1-\frac{x}{L})^2}+\frac{x}{L}-\frac{1}{4}\right]
+\end{array}
+$$
+$}
+\end{landscape}
+
+\end{document}
+%% ----- End Document -----

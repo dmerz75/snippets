@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: hyperref
+# key: hyperref
+# group: hyperref
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+% location | 'link text'
+\hyperref[$1]{''$2''}

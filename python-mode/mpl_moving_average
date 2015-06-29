@@ -2,6 +2,8 @@
 # name: mpl_moving_average
 # contributor: Dale R. Merz Jr.
 # key: mpl_moving_average
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 def moving_average(x, n, type='simple'):
     """ compute an n period moving average.

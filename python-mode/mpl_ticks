@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_tick
+# key: mpl_tick
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+# I want major ticks to be every 20
+major_ticks_x = np.linspace(0, 20, 11)
+major_ticks_y = np.linspace(0, 0.80, 9)
+# I want minor ticks to be every 5
+minor_ticks_x = np.linspace(0, 20, 21)
+minor_ticks_y = np.linspace(0, 0.80, 17)
+# If I do minor_ticks = np.arange(0, 301, 5), I will not get minor ticks for the entire plot
+
+# Specify tick label size
+ax1.tick_params(axis = 'both', which = 'major', labelsize = 20, length = 7, width = 1)
+# Suppress minor tick labels
+ax1.tick_params(axis = 'both', which = 'minor', labelsize = 0, length = 4, width = 0.5)
+ax1.set_xticks(major_ticks_x)
+ax1.set_xticks(minor_ticks_x, minor = True)
+ax1.set_yticks(major_ticks_y)
+ax1.set_yticks(minor_ticks_y, minor = True)

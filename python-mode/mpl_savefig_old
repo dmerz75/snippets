@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_savefig_old
+# key: mpl_savefig_old
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+def save_fig(i,subdir,fname):
+    ''' Make subdir if necessary.
+    '''
+    if subdir == '':
+        content_dir = my_dir
+    else:
+        content_dir = os.path.join('/'.join(my_dir.split('/')[0:i]),subdir)
+    if not os.path.exists(content_dir): os.makedirs(content_dir)
+    dir_filename = os.path.join(content_dir,fname)
+    fp_filename = os.path.join(dir_filename,fname)
+    if not os.path.exists(dir_filename): os.makedirs(dir_filename)
+    # Save in PNG,EPS,SVG,PDF,TIFF,JPG formats
+    # PIL, wxpython2.8, QT5Agg may be necessary
+    # Image.open('%s.png' % fp_filename).save('%s.jpg' % fp_filename,'JPEG')
+    # dpi = 300 # 300,900
+    # matplotlib.rcParams['figure.dpi'] = 900
+    dpi = matplotlib.rcParams['figure.dpi']
+    plt.savefig('%s.png' % dir_filename,dpi=dpi)
+    plt.savefig('%s.png' % fp_filename,dpi=dpi)
+    plt.savefig('%s.eps' % fp_filename,dpi=dpi)
+    plt.savefig('%s.svg' % fp_filename,dpi=dpi)
+    plt.savefig('%s.pdf' % fp_filename,dpi=dpi)
+    plt.savefig('%s.tiff' % fp_filename,dpi=dpi)
+    plt.savefig('%s.jpg' % fp_filename,dpi=dpi)
+
+if option == 'show':
+    plt.show()
+    sys.exit()
+elif option == 'publish':
+    matplotlib.rcParams['figure.dpi'] = 1200
+    data_name = data_name + '_PUB'
+    print "calling save_fig ..."
+    # save_pic_data(levels_back,subdir,name)
+    # example: save_fig(-4,'fig',name)
+    # example: save_fig(-3,'',name)
+    save_fig(0,'fig','%s_%s_%s' % (result_type,plot_type,data_name))
+else:
+    print 'saving dpi=300 (default) image ..'
+    plt.savefig('fig/%s_%s_%s.png' % (result_type,plot_type,data_name))
+
+# if sys.argv[1] == 'show':
+#     plt.show()
+#     sys.exit()
+# elif sys.argv[1] == 'publish':
+#     matplotlib.rcParams['figure.dpi'] = 1200
+#     data_name = data_name + '_PUB'
+#     print "calling save_fig ..."
+#     # save_pic_data(levels_back,subdir,name)
+#     # example: save_fig(-4,'fig',name)
+#     # example: save_fig(-3,'',name)
+#     save_fig(0,'fig','%s_%s_%s' % (result_type,plot_type,data_name))
+# else:
+#     print 'saving dpi=300 (default) image ..'
+#     plt.savefig('fig/%s_%s_%s.png' % (result_type,plot_type,data_name))
