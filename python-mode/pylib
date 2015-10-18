@@ -1,5 +1,9 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
 # name: pylib
 # key: pylib
+# group: pylib
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
 my_library = os.path.expanduser('~/.pylib')
 sys.path.append(my_library)

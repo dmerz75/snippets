@@ -1,0 +1,41 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: header_example: #ifndef _CLASSES_H_
+# key: header_example
+# group: myexamples
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+// $1.h
+
+// once
+#ifndef _$1_H_
+#define _$1_H_
+
+// libraries
+/* #include <stdio.h> */
+/* #include <string> */
+/* #include <stdlib.h> */
+
+
+class Position {
+
+public:
+    double x;
+    double y;
+    double z;
+
+    // Constructor
+    Position();
+
+    // Destructor
+    ~Position(){
+    };
+};
+
+inline Position::Position() {
+    x = 0.0;
+    y = 0.0;
+    z = 0.0;
+}
+
+#endif /* _$1_H_ */

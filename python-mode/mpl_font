@@ -5,9 +5,10 @@
 # group: mpl
 # expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
-# plt.subplots_adjust(left=0.180,right=0.960,top=0.950,bottom=0.160)
+fig.set_size_inches(8.5,5.1)
+plt.subplots_adjust(left=0.160,right=0.960,top=0.950,bottom=0.20)
 # font_prop_large = matplotlib.font_manager.FontProperties(size='large')
-# fig.set_size_inches(9.0,5.1)
+
 # for k in matplotlib.rcParams.keys():
 #     print k
 # dct_font = {'family':'sans-serif',

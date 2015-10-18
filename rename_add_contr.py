@@ -31,6 +31,3 @@ if __name__ == '__main__':
             for f in files:
                 rename(root, f)
                 # insert(root, f, orig, to)
-
-
-            

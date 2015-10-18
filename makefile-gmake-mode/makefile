@@ -11,6 +11,12 @@ CFLAGS   = -ansi -std=gnu99
 CFLAGS_1 = -ansi -pedantic -std=gnu99 -Wall -W
 CFLAGS_2 = -Wconversion -Wshadow -Wcast-qual -Wwrite-strings -g -O2
 
+# Valgrind
+VAL    = valgrind --track-origins=yes -v
+VALFULL= valgrind --track-origins=yes --leak-check=full -v
+VALMEM = valgrind --track-origins=yes --tool=memcheck --leak-check=full --show-leak-kinds=all --show-reachable=yes --num-callers=20 --track-fds=yes -v
+VALMASS= valgrind --tool=massif prog
+
 # Macros
 MACRO1 = -D$3
 

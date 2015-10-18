@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: stream
+# key: stream
+# group: file
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+// #include <fstream>
+// std::ofstream myfile;
+// myfile.open ("example.txt", std::ofstream::out);
+// myfile << "Writing this to a file.\n";
+// myfile.close();
+std::ostringstream fname;
+// fname << std::setw(3) << std::setfill('0') << 5 << ".$2";
+fname << "%1" << std::setw(3) <<5 << ".$2";
+std::ofstream fout(fname.str().c_str(), std::ios::out);
+fout.close();

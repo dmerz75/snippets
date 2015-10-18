@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: FindAllFiles
+# key: faf
+# group: mylib
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+# mylib
+my_library = os.path.expanduser('~/.pylib')
+sys.path.append(my_library)
+from mylib.FindAllFiles import *
+
+# FindAllFiles
+dct_find = {'cwd':my_dir,'pattern':'.dat'}
+x = FindAllFiles(dct_find)
+x.get_files()
+# x.print_query(x.dct)
+# x.query_ [dirname,file,filename](dct,pos)
+# x.remove_[dirname,file,filename](dct,pos)
+set9 = x.remove_dirname('B-partial')
+set9 = x.remove_filename('contact',set9)
+set9 = x.query_dirname('round9_r6',set9)
+set9 = x.remove_dirname('dat',set9,-1)
+print len(set9.keys()),'of',x.total
+x.print_query(set9)
+# sys.exit()

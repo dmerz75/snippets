@@ -1,0 +1,47 @@
+# -*- mode: snippet -*-
+# name: makefile2
+# key: makefile2
+# --
+# Makefile
+
+# Declaration of variables
+CC       := gcc
+CXX      := g++
+# LINKER   := gcc -fPIC
+# OBJDIR   := obj
+CC_FLAGS := -g -O3
+# INC      := -Iinclude -ITensors -IIO # not used, or not effective
+
+# File names
+EXEC = run_tensorsCalc
+
+# c files
+CFILES   := $(wildcard *.c)
+CFILES2  := $(wildcard Tensors/*.c)
+CFILES3  := $(wildcard IO/*.c)
+SOURCES  := $(CFILES) $(CFILES2) $(CFILES3)
+
+# o files
+OBJECTS = $(SOURCES:.c=.o)
+
+
+# ------------------------------------------------------------------------------
+# Main target
+$(EXEC): $(OBJECTS)
+	$(CC) $(OBJECTS) -lm -o $(EXEC)
+
+# To obtain object files
+%.o: %.c
+	$(CC) $(CC_FLAGS) $(INC) -c $< -o $@
+
+# To remove generated files
+clean:
+	rm -f $(EXEC) $(OBJECTS)
+
+go:
+	./$(EXEC)
+
+foo:
+	@echo echoing foo
+	@echo $(CFILES)
+	@echo $(SOURCES)
