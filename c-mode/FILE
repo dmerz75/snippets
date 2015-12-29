@@ -2,6 +2,6 @@
 # key: FILE
 # --
 FILE * fp_$1;
-fp_$1 = fopen ("file.txt", "w+");
+fp_$1 = fopen("$1.dat", "w+");
 fprintf(fp_$1, "%s %s %s %d", "We", "are", "in", 2012);
 fclose(fp_$1);

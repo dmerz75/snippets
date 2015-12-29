@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_
+# key: mpl_
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+cmap = plt.get_cmap('summer')
+v = np.linspace(45.0,75.0,4)
+plt.imshow(data,aspect='auto',extent=[0,data.shape[1],data.shape[0]*10,0],vmin=-1.0,vmax=1.0)
+x = plt.colorbar(ticks=v)
