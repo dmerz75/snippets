@@ -5,25 +5,35 @@
 # group: mylib
 # expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
 # --
-# mylib
+# mylib/faf
 my_library = os.path.expanduser('~/.pylib')
 sys.path.append(my_library)
 from mylib.FindAllFiles import *
 
-# FindAllFiles
-dct_find = {'cwd':my_dir,'pattern':'.dat'}
-x = FindAllFiles(dct_find)
-x.get_files()
-x.print_query(x.dct)
-print len(x.dct.keys()),'of',x.total
-sys.exit()
-# x.dct (last pos.)
-# x.sort_dirname
-# x.print_query,_class
-# x.query_ [dirname,file,filename](searchstring,pos,dct)
-# x.remove_[dirname,file,filename](searchstring,pos,dct)
-set9 = x.remove_dirname('dat',-1,set9)
-# set9 = x.sort_dirname(-1,set9)
-x.print_query(set9)
-print len(set9.keys()),'of',x.total
-# sys.exit()
+def load_dct(cwd=my_dir,pattern='*.dat'):
+    # FindAllFiles
+    print 'cwd:',cwd
+    print 'pattern:',pattern
+    dct_find = {'cwd':cwd,'pattern':pattern}
+    x = FindAllFiles(dct_find)
+    # print x.pattern
+    x.get_files()
+    x.print_query(x.dct)
+    print len(x.dct.keys()),'of',x.total
+    # x.dct (last pos.)
+    # set9 = x.sort_dirname(-1,x.dct)
+    # x.print_ [query,class]
+    # x.query_ [dirname,file,filename](searchstring,pos,dct)
+    # x.remove_[dirname,file,filename](searchstring,pos,dct)
+    # x.print_query(set9)
+    # print len(set9.keys()),'of',x.total
+    # sys.exit()
+    # return set9
+    return x.dct
+
+def sort_routine1(dct):
+    x = FindAllFiles()
+    print 'files entered:',len(dct.keys())
+
+dct_dat = load_dct(my_dir,'$1.dat')
+dct_1 = sort_routine1(dct_dat)

@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: FILE
+# key: FILE
+# group: myexamples
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+// FILE
+FILE * fp_$1;
+fp_$1 = fopen("$1.dat", "a+");
+fprintf(fp_$1,"\n");
+fclose(fp_$1);

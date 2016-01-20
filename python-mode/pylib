@@ -15,3 +15,4 @@ from mylib.run_command import *
 # from plot.WLC import WormLikeChain
 from plot.SOP import *
 # from mdanalysis.MoleculeUniverse import MoleculeUniverse
+from mylib.FindAllFiles import *
