@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_
+# key: mpl_
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+from cycler import cycler
+ax1.set_prop_cycle(cycler('color',['k','r','g','b','c','m','darkorange','lawngreen','sienna','maroon']))
