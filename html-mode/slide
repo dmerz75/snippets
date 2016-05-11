@@ -1,0 +1,5 @@
+#contributor : Dale R. Merz Jr.
+#name : <slide>...</slide>
+#group : reveal
+# --
+<section>$1</section>
