@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: memory allocation of pointer
+# key: pointer
+# group: memory allocation
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+// memory allocation.
+// #include <iostream>
+try
+{
+    // segment = new Segment[4];
+    $1 = new $1[5];
+}
+catch (std::bad_alloc xa)
+{
+    std::cout << "Allocation Failure\n";
+    return;
+}

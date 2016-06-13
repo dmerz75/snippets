@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: myheader
+# key: myheader
+# group: myexamples
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+// 1: c++, c: $1
+// 2: name: $2
+// $2.$1
+#ifndef _$2_$1_
+#define _$2_$1_
+
+/* ---------------------------------------------------------
+   libraries:
+   --------------------------------------------------------- */
+// #include <stdio.h>
+// #include <stdlib.h> // strtod?, stod
+// #include <assert.h>
+// #include <string.h> // string
+// #include <cctype.h>
+/* #include <algorithm> // remove_if, count */
+/* #include <iostream> */
+/* #include <fstream> */
+/* #include <ctime> */
+// #include <list>        // std::list
+/* #include <vector> */
+// #include <iterator> // istream_iterator
+
+
+
+/* ---------------------------------------------------------
+   headers:
+   --------------------------------------------------------- */
+#include "debug.h"
+/* #include "system.hpp" */
+// #include "atom.hpp"
+
+
+
+/* ---------------------------------------------------------
+   Definitions:
+   --------------------------------------------------------- */
+/* #define BUFFERSIZE 900 */
+
+
+
+/* ---------------------------------------------------------
+   Classes:
+   --------------------------------------------------------- */
+// header_class
+
+
+
+/* ---------------------------------------------------------
+   function declarations:
+   --------------------------------------------------------- */
+// void ReadPDBfile(PDBfile *pdbfile,char filename[40]);
+
+
+#endif

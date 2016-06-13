@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: commentbox
+# key: commentbox
+# group: comments
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+#  ---------------------------------------------------------  #
+#  $0                                                         #
+#  ---------------------------------------------------------  #

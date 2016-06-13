@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mycpp
+# key: mycpp
+# group: myexamples
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+// $1.cpp
+
+/* ---------------------------------------------------------
+   standard libraries
+   --------------------------------------------------------- */
+// #include <stdio.h>
+// #include <stdlib.h> // strtod?, stod
+// #include <assert.h>
+// #include <string.h> // string.
+// #include <cctype>
+// #include <algorithm> // remove_if, count
+// #include <iostream>
+// #include <fstream>
+// #include <ctime>
+// #include <list>        // std::list
+// #include <vector>
+// #include <iterator> // istream_iterator
+
+
+/* ---------------------------------------------------------
+   headers
+   --------------------------------------------------------- */
+#include "debug.h"
+#include "$1.hpp"
+
+
+/* ---------------------------------------------------------
+   functions
+   --------------------------------------------------------- */
+// void ReadPDBfile (PDBfile *pdbfile,char filename[40],System sys)

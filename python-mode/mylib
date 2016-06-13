@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mylib
+# key: mylib
+# group: mylib
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+# mylib/faf
+my_library = os.path.expanduser('~/.pylib')
+sys.path.append(my_library)
+# libraries:
+# from mylib.FindAllFiles import *
+# from mylib.moving_average import *
+# from mylib.cp import *
+# from mylib.FindAllFiles import *
+# from mylib.highway_check import *
+# from mylib.moving_average import *
+# from mylib.regex import reg_ex
+# from mylib.run_command import run_command
