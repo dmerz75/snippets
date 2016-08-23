@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_colorcycle
+# key: mpl_colorcycle
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+from cycler import cycler
+print matplotlib.rcParams['axes.prop_cycle']
+mycolors = ['k', 'r', 'g', 'b','c','m','lime','darkorange','sandybrown','hotpink']
+ax1.set_prop_cycle(cycler('color',mycolors))
+# reset:
+ax1.set_prop_cycle(cycler('color',mycolors)

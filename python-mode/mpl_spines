@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+# contributor: Dale R. Merz Jr.
+# name: mpl_spines
+# key: mpl_spines
+# group: mpl
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region 'nil))')'))
+# --
+gs = GridSpec(2,1)
+ax1 = plt.subplot(gs[0,:])
+ax2 = plt.subplot(gs[1,:],sharex=ax1)
+
+ax3 = ax2.twiny()
+ax4 = ax2.twiny()
+ax = [ax1,ax2,ax3,ax4]
+
+fig.text(0.03,0.095,'Time (ms)',color='b',size=14)
+ax3.spines['bottom'].set_color('b')
+ax3.spines['bottom'].set_position(('outward',65.0))
+ax3.xaxis.set_ticks_position('bottom')
+for tick in ax3.xaxis.get_major_ticks():
+    tick.label.set_fontsize(14)
+
+fig.text(0.03,0.045,'Frame #',color='m',size=14)
+ax4.spines['bottom'].set_color('m')
+ax4.spines['bottom'].set_position(('outward',90.0))
+ax4.xaxis.set_ticks_position('bottom')
+for tick in ax4.xaxis.get_major_ticks():
+    tick.label.set_fontsize(14)
+
+plt.subplots_adjust(left=0.24,right=0.960,top=0.950,bottom=0.200,hspace=0.0)
